@@ -1,0 +1,10 @@
+const toml = require_c("./libtoml.so")
+
+const s =
+`
+key = "value"
+`
+
+echo toml.open('./example.toml')
+
+

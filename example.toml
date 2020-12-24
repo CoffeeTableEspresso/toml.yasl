@@ -1,0 +1,14 @@
+key = "value"
+a = "b"
+boolean = true
+n = 10
+f = 1.5
+array = [ 1, 2, 3 ]
+
+[subtable]
+subkey = [ "blah", "blah", "blah" ]
+
+[another]
+subkey = true
+blah = "blah"
+

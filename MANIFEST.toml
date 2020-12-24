@@ -1,0 +1,10 @@
+name = "toml"
+authors = [ "CoffeeTableEspresso <coffeetableespresso@gmail.com>" ]
+version = "v0.1.0"
+
+[build]
+sources = [ "toml.c" ]
+
+[deps]
+time = "v0.1.0"
+

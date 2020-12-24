@@ -1,0 +1,6 @@
+[submodule "tomlc99"]
+	path = tomlc99
+	url = ./tomlc99/
+[submodule "time.yasl"]
+	path = time.yasl
+	url = https://github.com/CoffeeTableEspresso/time.yasl
