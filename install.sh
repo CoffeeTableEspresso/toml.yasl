@@ -8,4 +8,5 @@ set -e
 cmake .
 make toml
 
+mkdir -p /usr/local/lib/yasl/
 mv libtoml.so /usr/local/lib/yasl/
