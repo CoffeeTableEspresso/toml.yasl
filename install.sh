@@ -1,5 +1,10 @@
 set -e
 
+(
+    cd tomlc99
+    make
+)
+
 cmake .
 make toml
 
