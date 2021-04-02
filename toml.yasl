@@ -1,1 +1,37 @@
-export __require_c__('toml')
+const fn stringify_value(const value) {
+    match value {
+        bool | int {
+            return value->tostr()
+        }
+        str {
+            return "\"#{value}\""
+        }
+        list {
+            return [ stringify_value(e) for e <- value ]->tostr()
+        }
+    }
+}
+
+const fn stringify(const table, const prefix) {
+    const first = []
+    const second = []
+    for key <- table {
+        const val = table[key]
+        match val {
+            table {
+                const p = prefix ? prefix ~ '.' : ''
+                second->push("[#{p}#{key}]\n#{stringify(val, key)}\n")
+            }
+            bool | int | str | list {
+                first->push("#{key} = #{stringify_value(val)}\n")
+            }
+            * {
+                return undef
+            }
+        }
+    }
+
+    return first->join('') ~ second->join('')
+}
+
+export { .stringify: stringify } | __require_c__('toml')
