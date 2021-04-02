@@ -1,4 +1,4 @@
-const toml = __require_c__("./libtoml.so")
+const toml = __require_c__("toml")
 
 echo toml.open('./example.toml')
 
