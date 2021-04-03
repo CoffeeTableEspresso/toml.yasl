@@ -3,7 +3,7 @@ authors = [ "CoffeeTableEspresso <coffeetableespresso@gmail.com>" ]
 version = "v0.1.0"
 
 [build]
-sources = [ "toml.c". "tomlc99/toml.c" ]
+sources = [ "toml.c", "tomlc99/toml.c" ]
 scripts = [ "toml.yasl" ]
 linkage = [ "toml" ]
 
