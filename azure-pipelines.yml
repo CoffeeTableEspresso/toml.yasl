@@ -33,6 +33,10 @@ jobs:
     displayName: "Install YASL"
   - script: |
       set -e
+      (
+        cd tomlc99
+        make
+      )
       cmake .
       make
       sudo mkdir -p /usr/local/lib/yasl/
