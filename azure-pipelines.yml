@@ -31,17 +31,8 @@ jobs:
         sudo ./install.sh
       )
     displayName: "Install YASL"
-  - script: |
-      set -e
-      (
-        cd tomlc99
-        make
-      )
-      cmake .
-      make
-      sudo mkdir -p /usr/local/lib/yasl/
-      sudo mv libtoml.so /usr/local/lib/yasl/
-      sudo mv toml.yasl /usr/local/lib/yasl/
+  - script:
+      sudo ./install.sh
     displayName: "Compile"
   - script:
       ./tests.sh
