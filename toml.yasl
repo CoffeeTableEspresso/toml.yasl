@@ -1,3 +1,5 @@
+const VERSION = 'v0.1.0'
+
 const fn stringify_value(const value) {
     match value {
         bool | int {
@@ -34,4 +36,4 @@ const fn stringify(const table, const prefix) {
     return first->join('') ~ second->join('')
 }
 
-export { .stringify: stringify, .__VERSION__: 'v0.1.0' } | __require_c__('toml')
+export { .stringify: stringify, .__VERSION__: VERSION } | __require_c__('toml')
