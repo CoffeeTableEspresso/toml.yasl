@@ -2,4 +2,6 @@
 export {
     parse(str) -> table
     open(str) -> table
+    stringify(table) -> str
+    __VERSION__ -> str
 }
