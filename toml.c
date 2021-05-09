@@ -165,16 +165,7 @@ int YASL_toml_open(struct YASL_State *S) {
 	return 1;
 }
 
-int YASL_toml_stringify(struct YASL_State *S) {
-	if (!YASL_istable(S)) {
-		YASLX_print_err_bad_arg_type(S, "toml.stringify", 0, "table", YASL_peektypename(S));
-		YASL_throw_err(S, YASL_TYPE_ERROR);
-	}
-
-	return 1;
-}
-
-void YASL_load_dyn_lib(struct YASL_State *S) {
+int YASL_load_dyn_lib(struct YASL_State *S) {
 	YASL_pushtable(S);
 
 	YASL_pushlit(S, "parse");
@@ -185,9 +176,5 @@ void YASL_load_dyn_lib(struct YASL_State *S) {
 	YASL_pushcfunction(S, YASL_toml_open, 1);
 	YASL_tableset(S);
 
-	/*
-	YASL_pushlit(S, "stringify");
-	YASL_pushcfunction(S, YASL_toml_stringify, 1);
-	YASL_tableset(S);
-	*/
+	return 1;
 }
