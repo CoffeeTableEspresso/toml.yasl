@@ -16,6 +16,7 @@ jobs:
     vmImage: 'ubuntu-20.04'
   steps:
   - checkout: self
+    submodules: true
     persistCredentials: true
   - script:
       sudo apt install valgrind
