@@ -15,9 +15,9 @@ jobs:
   pool:
     vmImage: 'ubuntu-20.04'
   steps:
+  - checkout: git@github.com:CoffeeTableEspresso/time.yasl.git
   - checkout: self
     submodules: true
-    persistCredentials: true
   - script:
       sudo apt install valgrind
     displayName: "Install Valgrind"
