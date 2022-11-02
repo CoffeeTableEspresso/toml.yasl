@@ -21,6 +21,10 @@ jobs:
       sudo apt install valgrind
     displayName: "Install Valgrind"
   - script: |
+      git submodule init
+      git submodule update
+    displayName: "Checkout Submodules"
+  - script: |
       set -e
       git clone --single-branch --branch v0.11.2 https://github.com/yasl-lang/yasl/
       (
