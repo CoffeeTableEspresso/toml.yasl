@@ -16,6 +16,7 @@ jobs:
     vmImage: 'ubuntu-20.04'
   steps:
   - checkout: self
+    submodules: no
   - script:
       git submodule init
       git submodule update
