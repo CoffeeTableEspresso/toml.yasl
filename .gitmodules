@@ -1,6 +1,6 @@
 [submodule "tomlc99"]
 	path = tomlc99
-	url = ../cktan/tomlc99.git
+	url = ../../cktan/tomlc99.git
 [submodule "time.yasl"]
 	path = time.yasl
-	url = ../CoffeeTableEspresso/time.yasl.git
+	url = ../time.yasl.git
