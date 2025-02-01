@@ -9,5 +9,5 @@ cmake .
 make toml
 
 mkdir -p /usr/local/lib/yasl/
-mv libtoml.so /usr/local/lib/yasl/
-mv toml.yasl /usr/local/lib/yasl/
+cp libtoml.so /usr/local/lib/yasl/
+cp toml.yasl /usr/local/lib/yasl/

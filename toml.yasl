@@ -9,7 +9,7 @@ const fn stringify_value(const value) {
             return "\"#{value}\""
         }
         list {
-            return [ stringify_value(e) for e <- value ]->tostr()
+            return [ stringify_value(e) for e in value ]->tostr()
         }
     }
 }
@@ -17,7 +17,7 @@ const fn stringify_value(const value) {
 const fn stringify(const table, const prefix) {
     const first = []
     const second = []
-    for key <- table {
+    for key in table {
         const val = table[key]
         match val {
             table {
